@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>NER Visualization</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                .entity { padding: 2px 4px; margin: 2px; border-radius: 3px; }
+                .PER { background-color: #ffeaa7; }
+                .ORG { background-color: #74b9ff; color: white; }
+                .LOC { background-color: #fd79a8; color: white; }
+                .MISC { background-color: #a29bfe; color: white; }
+                .entity-label { font-size: 0.8em; font-weight: bold; }
+                .text-container { line-height: 1.6; font-size: 18px; }
+            </style>
+        </head>
+        <body>
+            <h2>Named Entity Recognition Results</h2>
+            <div class="text-container">
+                <span class="entity ORG">Apple Inc. <span class="entity-label">ORG</span></span> is planning to open a new store in <span class="entity LOC">New York <span class="entity-label">LOC</span></span> City.
+            </div>
+            <h3>Entities Found:</h3>
+            <ul>
+                <li><strong>New York</strong> - LOC</li>
+<li><strong>Apple Inc.</strong> - ORG</li>
+            </ul>
+        </body>
+        </html>
+        

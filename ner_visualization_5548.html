@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>NER Visualization</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                .entity { padding: 2px 4px; margin: 2px; border-radius: 3px; }
+                .PER { background-color: #ffeaa7; }
+                .ORG { background-color: #74b9ff; color: white; }
+                .LOC { background-color: #fd79a8; color: white; }
+                .MISC { background-color: #a29bfe; color: white; }
+                .entity-label { font-size: 0.8em; font-weight: bold; }
+                .text-container { line-height: 1.6; font-size: 18px; }
+            </style>
+        </head>
+        <body>
+            <h2>Named Entity Recognition Results</h2>
+            <div class="text-container">
+                <span class="entity PER">Barack Obama <span class="entity-label">PER</span></span> was the 44th President of the <span class="entity LOC">United States <span class="entity-label">LOC</span></span>.
+            </div>
+            <h3>Entities Found:</h3>
+            <ul>
+                <li><strong>United States</strong> - LOC</li>
+<li><strong>Barack Obama</strong> - PER</li>
+            </ul>
+        </body>
+        </html>
+        
