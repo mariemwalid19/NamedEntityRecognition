@@ -15,17 +15,19 @@
   * LOC (Location)
   * MISC (Miscellaneous)
 
-## Features Implemented ### Core Requirements - 
-✅ **Data Processing**: Parsing CoNLL IOB files and converting to spaCy training format - 
-✅ **Rule-Based NER**: Using spaCy’s EntityRuler to learn from training patterns - 
-✅ **Model-Based NER**: Training a custom spaCy model with validation set - 
-✅ **Evaluation**: Precision, Recall, F1-score, and per-entity metrics - 
-✅ **Visualization**: Entity highlighting via displaCy, confusion matrix plots
+## Features Implemented  
 
-### Bonus Features - 
-✅ **Model Comparison**: Compare spaCy baseline models (`en_core_web_sm` vs `en_core_web_md`) - 
-✅ **Persistence**: Save models, metrics, confusion matrix, and HTML visualizations - 
-✅ **Comprehensive Output**: JSON reports, visualizations, and summaries
+### Core Requirements  
+- ✅ **Data Processing**: Parsing CoNLL IOB files and converting them to spaCy training format  
+- ✅ **Rule-Based NER**: Using spaCy’s `EntityRuler` to learn from training patterns  
+- ✅ **Model-Based NER**: Training a custom spaCy model with a validation set  
+- ✅ **Evaluation**: Precision, Recall, F1-score, and per-entity metrics  
+- ✅ **Visualization**: Entity highlighting via displaCy, confusion matrix plots 
+
+### Bonus Features  
+- ✅ **Model Comparison**: Compare spaCy baseline models (`en_core_web_sm` vs `en_core_web_md`)  
+- ✅ **Persistence**: Save models, metrics, confusion matrix, and HTML visualizations  
+- ✅ **Comprehensive Output**: JSON reports, visualizations, and summaries  
 
 ## Technology Stack ### Libraries Used 
 - **NLP**: spaCy 
@@ -80,7 +82,8 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-## Usage ### Training and Evaluation Run the pipeline:
+## Usage 
+### Training and Evaluation Run the pipeline:
 
 ```bash
 python ner_pipeline.py
@@ -95,7 +98,16 @@ doc = nlp("Apple is planning to open a new office in Paris.")
 print([(ent.text, ent.label_) for ent in doc.ents])
 ```
 
-## Model Performance | Model | Precision | Recall | F1-Score | |-------|-----------|--------|----------| | Rule-Based NER | \~0.39 | \~0.64 | \~0.48 | | Custom spaCy Model | \~0.82 | \~0.80 | \~0.81 | | Pretrained (en\_core\_web\_sm) | \~0.78 | \~0.75 | \~0.76 | | Pretrained (en\_core\_web\_md) | \~0.80 | \~0.78 | \~0.79 | *Best Model: Custom spaCy Model with F1 \~0.81*
+## Model Performance  
+
+| Model                      | Precision | Recall | F1-Score |
+|-----------------------------|-----------|--------|----------|
+| **Rule-Based NER**          | ~0.39     | ~0.64  | ~0.48    |
+| **Custom spaCy Model**      | ~0.82     | ~0.80  | ~0.81    |
+| **Pretrained (en_core_web_sm)** | ~0.78 | ~0.75  | ~0.76    |
+| **Pretrained (en_core_web_md)** | ~0.80 | ~0.78  | ~0.79    |
+
+**✨ Best Model:** Custom spaCy Model with **F1 ≈ 0.81**
 
 ## Key Technical Decisions 
 ### Data Handling 
